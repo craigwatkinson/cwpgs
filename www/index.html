@@ -15,12 +15,18 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
+                <p id="cw1"></p>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+        </script>
+        <script type="text/javascript" src="js/ble.js"></script>
+        <script type="text/javascript">
+            document.getElementById("cw1").innerHTML = "About to initialise";
+            bluetoothle.initialize(initializeSuccess, initializeError);
         </script>
     </body>
 </html>
