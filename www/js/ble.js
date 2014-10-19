@@ -16,6 +16,7 @@ var androidPlatform = "Android";
 
 function initializeSuccess(obj)
 {
+    document.getElementById("cw1").innerHTML = "Initialize success!";
   if (obj.status == "enabled")
   {
     var address = window.localStorage.getItem(addressKey);
@@ -38,6 +39,7 @@ function initializeSuccess(obj)
 
 function initializeError(obj)
 {
+  document.getElementById("cw1").innerHTML = "Initialize failed";
   console.log("Initialize error: " + obj.error + " - " + obj.message);
 }
 
