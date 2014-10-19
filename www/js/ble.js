@@ -13,9 +13,12 @@ var reconnectTimer = null;
 var iOSPlatform = "iOS";
 var androidPlatform = "Android";
 
-document.getElementById("cw1").innerHTML = "Init called 1";
-bluetoothle.initialize(initializeSuccess, initializeError);
-document.getElementById("cw1").innerHTML = "Init called 2";
+function doInit()
+{
+  document.getElementById("cw1").innerHTML = "Init called 1";
+  bluetoothle.initialize(initializeSuccess, initializeError);
+  document.getElementById("cw1").innerHTML = "Init called 2";
+}
 
 function initializeSuccess(obj)
 {
