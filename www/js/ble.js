@@ -45,7 +45,7 @@ function initializeSuccess(obj)
 
 function initializeError(obj)
 {
-  document.getElementById("cw1").innerHTML = "Initialize failed";
+  document.getElementById("cw1").innerHTML = "Initialize failed " + obj.error + " - " + obj.message;
   console.log("Initialize error: " + obj.error + " - " + obj.message);
 }
 
